@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url('img/Fondo.jpg');
+    background-size: cover;
+    background-position: center; 
+    color: #333; /* Color de texto oscuro para mejor legibilidad */
+    font-size: 16px; /* Tamaño de fuente predeterminado */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+header {
+    background-image: url('img/Logo.jpg');
+    background-color: #333;
+    background-size: cover; 
+    background-position: center; 
+    padding: 40px 20px; /* Aumento del espacio alrededor del contenido */
+    text-align: center;
+    color: #fff; /* Color de texto claro para contraste */
+    font-size: 24px; /* Tamaño de fuente aumentado */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Alineación horizontal de los elementos de la lista */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Color de texto claro para contraste */
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto; /* Espacio alrededor del contenedor */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo semitransparente */
+    color: #fff; /* Color de texto claro para contraste */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.section-title {
+    border-bottom: 2px solid #fff; /* Borde inferior blanco */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el formulario de contacto y cualquier otra página */
+#contactForm,
+#formulario {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm button,
+#formulario input,
+#formulario textarea,
+#formulario button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactForm button,
+#formulario button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#contactForm button:hover,
+#formulario button:hover {
+    background-color: #0056b3;
+}
+
+#mensajeExito,
+#mensajeError {
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Aumento del espacio alrededor del contenido */
+    margin-top: 20px;
+    border-top: 2px solid #fff; /* Borde superior blanco */
+}

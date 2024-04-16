@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería el Dorado</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el formulario */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Panaderia el Dorado
+        </h1>
+        <nav>
+            <ul>
+               <li><a href="/">Inicio</a></li>
+               <li><a href="/formulario">Formulario</a></li>
+               <li><a href="/about">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+  </header>
+    <h1>Contacto</h1>
+    <p>Póngase en contacto con nosotros:</p>
+    <form id="contactForm" onsubmit="return validarFormulario()">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+    <p id="mensajeExito" style="display:none; color:green;">¡Mensaje enviado con éxito!</p>
+    <p id="mensajeError" style="display:none; color:red;">Hubo un error al enviar el mensaje. Inténtelo de nuevo más tarde.</p>
+
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            if (nombre.trim() === '' || email.trim() === '' || mensaje.trim() === '') {
+                alert('Por favor, complete todos los campos del formulario.');
+                return false;
+            }
+
+        
+            document.getElementById('mensajeExito').style.display = 'block';
+            document.getElementById('mensajeError').style.display = 'none';
+
+
+            return false; 
+        }
+    </script>
+</body>
+</html>
